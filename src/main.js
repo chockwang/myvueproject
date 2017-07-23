@@ -10,6 +10,7 @@ Vue.use(vueRouter);
 import Home from "./components/Home.vue";
 import car from "./components/shopcar/car.vue";
 import newslist from "./components/news/newslist.vue";
+import newsinfo from "./components/news/newsinfo.vue";
 //3.0.2制定路由规则
 var router1=new vueRouter({
     linkActiveClass:"mui-active", //改变路由激活状态
@@ -17,6 +18,7 @@ var router1=new vueRouter({
         {path:"/Home",component:Home},
         {path:"/car",component:car},
         {path:"/news/newslist",component:newslist},
+        {path:"/news/newsinfo/:id",component:newsinfo},
         {path:"/",redirect:"/Home"}
     ]
 });

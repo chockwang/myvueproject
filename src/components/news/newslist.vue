@@ -5,7 +5,7 @@
     <div id="tmp">
         <ul class="mui-table-view">
             <li class="mui-table-view-cell mui-media"  v-for="item in list">
-                <a href="javascript:;">
+                <router-link v-bind="{to:'newsinfo/'+item.id}">
                     <img class="mui-media-object mui-pull-left" :src=item.img_url>
                     <div class="mui-media-body">
                        {{item.title}}
@@ -15,7 +15,7 @@
                             <span class="clicknum">点击数：{{item.click}}</span>
                         </div>
                     </div>
-                </a>
+                </router-link>
             </li>
         </ul>
 
